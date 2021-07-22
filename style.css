@@ -1,0 +1,111 @@
+body {
+  background-color: hsl(0, 0%, 81%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+.grid-container {
+  max-width: 90%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  margin: 50px auto;
+  /* grid-template-columns: repeat(4, 250px); */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 20px;
+  /* align-items: center;
+  justify-items: center; */
+}
+
+.cont {
+  border-radius: 7px;
+  padding: 30px 20px;
+}
+
+.one {
+  background-color: hsl(263, 55%, 52%);
+  color: white;
+  grid-column: span 2;
+}
+
+.two {
+  background-color: hsl(217, 19%, 35%);
+  color: white;
+}
+
+.three {
+  background-color: white;
+  grid-row: span 2;
+  color: hsl(217, 19%, 35%);
+}
+
+.four {
+  background-color: white;
+  color: hsl(217, 19%, 35%);
+}
+
+.five {
+  background-color: hsl(219, 29%, 14%);
+  grid-column: span 2;
+  color: white;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+}
+
+img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border: solid 2px rgba(255, 255, 255, 0.336);
+  margin-right: 10px;
+}
+
+.name {
+  font-size: 14px;
+}
+
+.descrip {
+  font-size: 11px;
+  color: hsl(0, 0%, 81%);
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px;
+}
+
+p {
+  font-size: 12px;
+  color: hsl(0, 0%, 81%);
+  margin: 0 10px;
+  line-height: 18px;
+}
+
+.w {
+  color: hsl(217, 19%, 35%);
+}
+
+@media (max-width: 1193px) {
+  .four {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 893px) {
+  .four {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 564px) {
+  .one,
+  .two,
+  .three,
+  .five,
+  .four {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+}
